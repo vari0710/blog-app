@@ -21,7 +21,7 @@ class BlogController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create(blogs $blog)
+    public function create(BlogPost $blog)
     {
         //
         return view("/create",["blog" => $blog]);
