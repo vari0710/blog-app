@@ -15,15 +15,16 @@ class BlogController extends Controller
     {
         //
         $blogs = BlogPost::All(); 
-        return view("/index");
+        return view("/index", compact('blogs'));
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(blogs $blog)
     {
         //
+        return view("/create",["blog" => $blog]);
     }
 
     /**
